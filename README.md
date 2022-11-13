@@ -26,4 +26,4 @@ hk3345678
 * 即時顯示訂房價格總價
 * 使用輪播效果提供各房型資訊
 * 訂單篩選、編輯、刪除
-* 支援 RWD 響應式網站 iPad Mini iPhone、12 Pro 等解析度
+* 支援 RWD 響應式網站 iPad Mini、iPhone 12 Pro 等解析度
