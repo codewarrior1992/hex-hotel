@@ -1,0 +1,132 @@
+.admin-modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.55);
+    z-index: 12;
+    pointer-events: none;
+    opacity: 0;
+    transition: ease-in .3s opacity;
+
+    &.isDeleteModal{
+        opacity: 1;
+        pointer-events: auto;
+        .delete-modal {
+            opacity: 1;
+            z-index: 13;
+        }
+    }
+    .delete-modal{
+        position: absolute;
+        background-color: #fff;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        .header{
+            min-width: 370px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            border:1px solid $gray-light;
+            h1{
+                font-size: 24px;
+            }
+        }
+        .footer{
+            padding: 16px;
+            display: flex;
+            justify-content: flex-end;
+            .delete-btn{
+                padding: 12px 24px;
+                color:$white;
+                background-color: $danger;
+                border:none;
+                transition: background-color .3s ease;
+                width: 100%;
+                text-align: center;
+                &:hover{
+                    background-color: darken($danger,5%);
+                }
+            }
+        }
+    }
+
+    &.isUpdateModal{
+        opacity: 1;
+        pointer-events: auto;
+        .update-modal {
+            opacity: 1;
+            z-index: 13;
+            @media screen and (min-width:768.9px) and (max-width:844px){
+                max-height: 340px;
+                overflow:auto;
+            }
+        }
+    }
+    .update-modal{
+        position: absolute;
+        background-color: #fff;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        min-width: 600px;
+        @include mobile{
+            min-width: 340px;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 16px 0 16px;
+            h1{
+                font-size: 24px;
+            }
+        }
+        .body{
+            padding: 16px 16px 0 16px;
+            .expense {
+                color: $gray-middle;
+                font-size: 16px;
+                margin-top: 24px;
+                li.item,
+                li.total {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                li.item {
+                    margin-bottom: 12px;
+                }
+                li.total {
+                    color: #2d3643;
+                    font-size: 16px;
+                    margin-top: 16px;
+                    padding-top: 16px;
+                    border-top: 1px solid #e3e6e9;
+                    font-weight: bold;
+                    strong {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .footer{
+            padding: 16px;
+            text-align: center;
+            cursor: pointer;
+            .update-btn{
+                padding: 12px 24px;
+                display: block;
+                color:$white;
+                background-color: $primary;
+                border:none;
+                transition: background-color .3s ease;
+                &:hover{
+                    background-color: darken($primary,5%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+.home-page{
+    padding-top: 64px;
+    .banner{
+        position: relative;
+        margin-bottom: 48px;
+        h1{
+            position: absolute;
+            top:0;
+            left:0;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 48px;
+            writing-mode: vertical-rl;
+            z-index: 8;
+            background-color: $white;
+            @include mobile{
+                opacity: 0;
+            }
+        }
+        .bg-cover{
+            position: relative;
+            top:0;
+            left:0;
+            width: 100%;
+            max-width: 920px;
+            min-height: 352px;
+            background-position: top;
+            background-size: cover;
+        }
+        .date{
+            position: absolute;
+            right:0;
+            top:50px;
+            @include mobile {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }   
+    .recommend-room{
+        margin-bottom: 48px;
+    }
+    .introduce{
+        margin-bottom: 48px;
+        width: 100%;
+        min-height: 352px;
+        background-position: center;
+        background-size: cover;
+        .text-group{
+            position: absolute;
+            right:0;
+            top:249px;
+            z-index: 9;
+            @include mobile {
+                top:150px;
+            }
+            h2{
+                font-size: 36px;
+                color:$dark;
+                text-transform: capitalize;
+                font-weight: bold;
+                text-align: right;
+                margin-bottom: 10px;
+                @include mobile {
+                    text-align: center;
+                }
+            }
+            span{
+                font-size: 16px;
+                color:$gray-middle;
+                text-align: right;
+                display: block;
+                @include mobile {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .room-style{
+        margin-bottom: 48px;
+        .row-section{
+            margin-bottom: 48px;
+        }
+    }
+    /* common */
+    .theme-text{
+        margin-bottom: 24px;
+        @include mobile{
+            text-align: center;
+        }
+        h2{
+            color:$gray-middle;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        span{
+            color:$gray-middle;
+            font-size: 16px;
+        }
+    }
+    .room-info{
+        width: 100%;
+        cursor: pointer;
+        display: inline-block;
+        @include pad {
+            margin-bottom: 12px;
+        }
+        @include mobile {
+            margin-bottom: 24px;
+        }
+        .room-img{
+            background-size: cover;
+            background-position: bottom;
+            width: 100%;
+            height: 240px;
+            transition: transform .3s ease;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        h3 {
+            color : $gray-middle;
+            font-weight: bold;
+            font-size: 24px;
+            padding:12px 0 8px 0;
+            text-align: right;
+            @include mobile {
+                text-align: center;
+            }
+        }
+        span{
+            color : $gray-middle;
+            font-size: 16px;
+            display: block;
+            text-align: right;
+            @include mobile {
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.reserve-page{
+    padding-top: 111px;
+    ul.process{
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        counter-reset: step;
+        margin-bottom: 48px;
+        li{
+            width: 33.3333%;
+            text-align: center;
+            position: relative;
+            color:$gray-middle;
+            font-weight: bold;
+            &.active:before,&.active:after{
+                color:$white;
+                background-color: $primary;
+            }
+        }
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+    ul.process li:before {
+        content: counter(step);
+        counter-increment: step;
+        border-radius: 25px;
+        background-color: $white;
+        border:2px solid $primary;
+        color:$primary;
+        margin: 0 auto 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+    }
+    ul.process li:after{
+        content:'';
+        height:2px;
+        width: 100%;
+        background-color: $gray-light;
+        position: absolute;
+        top:11.5px;
+        left:-50%;
+        z-index: -1;
+    }
+    ul.process li:first-child:after{
+        content:none;
+    }
+    .content{
+        font-size: 16px;
+        margin-bottom: 72px;
+    }
+    ul.room-info{
+        border: 1px solid $gray-middle;
+        .title,.in,.out,.price{
+            padding: 24px 31px;
+        }
+        .image img{
+            max-height: 170px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom:1px solid $gray-middle;
+        }
+        .title {
+            border-bottom:1px solid $gray-middle;
+            h2 {
+                font-weight: bold;
+                font-size: 20px;
+                color:$dark;
+            }
+        }
+        .in,.out {
+            display: flex;
+            align-items: center;
+            border-bottom:1px solid $gray-middle;
+            color:$gray-middle;
+            span{
+                font-size: 16px;
+            }
+            span:nth-of-type(2){
+                display: inline-block;
+                margin-left: 16px;
+                margin-right: auto;
+            }
+        }
+        .price {
+            ul{
+                margin-bottom: 24px;
+            }
+            li{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 24px;
+                color:$gray-middle
+            }
+            .total{
+                display: flex;
+                justify-content: space-between;
+                color:$dark;
+                border-top:1px solid $gray-light;
+                padding-top: 24px;
+                strong{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

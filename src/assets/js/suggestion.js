@@ -1,0 +1,20 @@
+export const suggestion =[
+    'Single Room',
+    'Deluxe Single Room',
+    'Double Room',
+    'Deluxe Double Room',
+    'Family Room',
+    'Deluxe Family Room',
+    '單人房',
+    '高級單人房',
+    '雙人房',
+    '高級雙人房',
+    '家庭房',
+    '高級家庭房',
+    'シングルルーム',
+    'デラックスシングルルーム',
+    'ダブルルーム',
+    'デラックスダブルルーム',
+    'ツインルーム',
+    'デラックスファミリールーム'
+]

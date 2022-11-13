@@ -1,0 +1,34 @@
+// ---- Media Query ---- //
+@mixin pad {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin mobile-x {
+    @media screen and (max-width: 844px){
+        @content;
+    }
+}
+  
+// ---- CSS Effect ---- //
+@mixin zoom-hover($speed,$scale) {
+  transition: transform $speed ease;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin section-center {
+  max-width: 1110px;
+  margin-left:  auto;
+  margin-right:  auto;
+  width: 100%;
+}

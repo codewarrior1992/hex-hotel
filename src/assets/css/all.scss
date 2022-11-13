@@ -1,0 +1,38 @@
+/* ##----------- Config ----------- ## */
+@import '~bootstrap/scss/functions';
+@import './helpers/_variables';
+@import '~bootstrap/scss/bootstrap';
+
+@import './helpers/_reset';
+@import './helpers/_font';
+@import './helpers/_mixin';
+
+@import'./components/loading.scss';
+@import'./components/alert-msg.scss';
+@import'./components/home-nav.scss';
+@import'./components/room-nav.scss';
+@import'./components/footer.scss';
+@import'./components/home-date-picker';
+@import'./components/room-date-picker';
+@import'./components/user-modal.scss';
+@import'./components/room-component.scss';
+@import'./components/book-info.scss';
+@import'./components/book-payment.scss';
+@import'./components/book-done.scss';
+@import'./components/admin-nav.scss';
+@import'./components/admin-order.scss';
+@import'./components/admin-modal.scss';
+@import'./components/page-button.scss';
+
+@import'./views/home-page.scss';
+@import'./views/room-page.scss';
+@import'./views/reserve-page.scss';
+@import'./views/admin-page.scss';
+
+
+
+
+
+
+
+
