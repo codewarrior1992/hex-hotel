@@ -4,6 +4,12 @@
 * Demo : https://codewarrior1992.github.io/hex-hotel/
 * 設計稿 : [吳俊儀 Juniwu](https://challenge.thef2e.com/user/2760?schedule=3948#works-3948)
 
+### 測試用帳號、密碼
+```
+owner1992@gmail.com
+hk3345678
+```
+
 ### 專案說明
 * 使用 Vuex 管理資料狀態
 * 使用 Vue Router 管理路由
